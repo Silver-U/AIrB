@@ -1,0 +1,9 @@
+<div>
+  <p *ngIf="annonces === null || annonces.length === 0">
+    Vous n'avez aucune annonce de livraison!
+  </p>
+  <div  *ngIf="!(annonces === null || annonces.length === 0)">
+    <app-annonce *ngFor="let item of annonces" [annonce]="item"></app-annonce>
+  </div>
+
+</div>
